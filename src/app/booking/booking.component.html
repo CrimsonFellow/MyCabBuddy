@@ -1,0 +1,26 @@
+<<div class="booking-container">
+    <h2>Create a Booking</h2>
+    <form (ngSubmit)="createBooking()">
+      <div>
+        <label for="source">Source</label>
+        <input type="text" id="source" [(ngModel)]="newBooking.source" name="source" required>
+      </div>
+      <div>
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" [(ngModel)]="newBooking.destination" name="destination" required>
+      </div>
+      <div>
+        <label for="bookingTime">Booking Time</label>
+        <input type="datetime-local" id="bookingTime" [(ngModel)]="newBooking.bookingTime" name="bookingTime" required>
+      </div>
+      <button type="submit">Create Booking</button>
+    </form>
+  
+    <h2>Your Bookings</h2>
+    <ul>
+      <li *ngFor="let booking of bookings">
+        {{ booking.source }} to {{ booking.destination }} on {{ booking.bookingTime | date }}
+      </li>
+    </ul>
+  </div>
+  

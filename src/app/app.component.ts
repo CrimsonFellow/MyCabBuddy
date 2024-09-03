@@ -1,13 +1,36 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [RouterModule, CommonModule],
 })
 export class AppComponent {
-  title = 'booking-app';
+  isLoggedIn = false;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const currentUser = localStorage.getItem('currentUser');
+      this.isLoggedIn = !!currentUser;
+    }
+  }
+
+  logout() {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      localStorage.removeItem('currentUser');
+    }
+    this.isLoggedIn = false;
+    this.router.navigate(['/login']);
+  }
 }
+
+
+
+

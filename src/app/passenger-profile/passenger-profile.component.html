@@ -1,0 +1,68 @@
+<div class="profile-container">
+  <h2>Passenger Profile</h2>
+  
+  <button class="logout-button" (click)="logout()">Logout</button>
+
+  <div *ngIf="profile" class="profile-details">
+    <p><strong>Name:</strong> {{ profile.name }}</p>
+    <p><strong>Email:</strong> {{ profile.email }}</p>
+    <p><strong>Username:</strong> {{ profile.username }}</p>
+    <p><strong>Phone:</strong> {{ profile.phone }}</p>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+  <h3>Your Bookings</h3>
+  <table *ngIf="bookings && bookings.length > 0">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Fare</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.source }}</td>
+        <td>{{ booking.destination }}</td>
+        <td>{{ booking.fare | currency }}</td>
+        <td>{{ booking.bookingTime | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="bookings.length === 0">No bookings found.</div>
+  
+  <h3>Book a Trip</h3>
+  <form (ngSubmit)="onBook()">
+    <div>
+      <label for="source">Source:</label>
+      <select id="source" [(ngModel)]="source" name="source" (change)="calculateFare()">
+        <option value="">Select a source</option>
+        <option value="New York">New York</option>
+        <option value="Boston">Boston</option>
+        <option value="Washington, D.C.">Washington, D.C.</option>
+        <option value="Philadelphia">Philadelphia</option>
+        <option value="Baltimore">Baltimore</option>
+      </select>
+    </div>
+    <div>
+      <label for="destination">Destination:</label>
+      <select id="destination" [(ngModel)]="destination" name="destination" (change)="calculateFare()">
+        <option value="">Select a destination</option>
+        <option value="New York">New York</option>
+        <option value="Boston">Boston</option>
+        <option value="Washington, D.C.">Washington, D.C.</option>
+        <option value="Philadelphia">Philadelphia</option>
+        <option value="Baltimore">Baltimore</option>
+      </select>
+    </div>
+    <div>
+      <label for="fare">Fare:</label>
+      <p *ngIf="fare !== null">{{ fare | currency }}</p>
+    </div>
+    <button type="submit" [disabled]="!source || !destination || fare === null">Book</button>
+  </form>
+</div>
+
+
+

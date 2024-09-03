@@ -1,0 +1,98 @@
+/* login.component.css */
+
+/* General Container Styling */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Header Styling */
+  .login-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Group Styling */
+  .login-container form div {
+    margin-bottom: 15px;
+  }
+  
+  /* Label Styling */
+  .login-container label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  /* Input Styling */
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .login-container input[type="text"]:focus,
+  .login-container input[type="password"]:focus {
+    border-color: #888;
+    outline: none;
+  }
+  
+  /* Button Styling */
+  .login-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .login-container button[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  /* Error Message Styling */
+  .login-container .error-message {
+    margin-top: 10px;
+    color: #d9534f;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Link Styling */
+  .login-container p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .login-container a {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-container a:hover {
+    text-decoration: underline;
+  }
+  
