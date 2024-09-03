@@ -1,27 +1,22 @@
-# BookingApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+My Cab Buddy
+Course-end Project 1
+Description
 
-## Development server
+To build an application to handle data of bookings and passenger profiles for a travel company using microservices and API frameworks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ 
 
-## Code scaffolding
+Prerequisites:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+JUnit
+Spring
+Spring Boot
+Web Services
+Microservices
+ 
 
-## Build
+Problem Statement:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This assignment is designed to help understand how to plan and develop the back end for a given problem. Further, to gain hands-on experience in designing the web service architecture for the project and finally perform unit testing for the code.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
