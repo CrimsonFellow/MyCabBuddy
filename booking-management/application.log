@@ -1,0 +1,811 @@
+2024-09-03T09:12:49.789+02:00  INFO 13164 --- [main] c.t.b.BookingManagementApplication       : Starting BookingManagementApplication using Java 21.0.2 with PID 13164 (C:\Users\Admin\eclipse-workspace\booking-management\target\classes started by Admin in C:\Users\Admin\eclipse-workspace\booking-management)
+2024-09-03T09:12:49.797+02:00  INFO 13164 --- [main] c.t.b.BookingManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T09:12:50.369+02:00  INFO 13164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T09:12:50.427+02:00  INFO 13164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2024-09-03T09:12:50.864+02:00  INFO 13164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-03T09:12:50.884+02:00  INFO 13164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T09:12:50.885+02:00  INFO 13164 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-03T09:12:50.934+02:00  INFO 13164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T09:12:50.936+02:00  INFO 13164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1093 ms
+2024-09-03T09:12:51.076+02:00  INFO 13164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T09:12:51.142+02:00  INFO 13164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-03T09:12:51.178+02:00  INFO 13164 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-03T09:12:51.478+02:00  INFO 13164 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T09:12:51.507+02:00  INFO 13164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T09:12:51.753+02:00  INFO 13164 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15cee630
+2024-09-03T09:12:51.755+02:00  INFO 13164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T09:12:51.796+02:00  WARN 13164 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-03T09:12:51.797+02:00  WARN 13164 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-03T09:12:52.560+02:00  INFO 13164 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-03T09:12:52.621+02:00  INFO 13164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T09:12:52.907+02:00  WARN 13164 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T09:12:52.923+02:00  INFO 13164 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-09-03T09:12:53.130+02:00 DEBUG 13164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-03T09:12:53.316+02:00  INFO 13164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-03T09:12:53.322+02:00  INFO 13164 --- [main] c.t.b.BookingManagementApplication       : Started BookingManagementApplication in 3.859 seconds (process running for 4.548)
+2024-09-03T09:17:24.341+02:00  INFO 13164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-03T09:17:24.341+02:00  INFO 13164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-03T09:17:24.341+02:00  INFO 13164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-09-03T09:17:24.357+02:00 DEBUG 13164 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:17:24.388+02:00 DEBUG 13164 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:17:24.391+02:00 DEBUG 13164 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:17:24.476+02:00 ERROR 13164 --- [http-nio-8080-exec-2] c.t.b.c.PassengerProfileController       : Password is missing or empty
+2024-09-03T09:17:24.487+02:00 DEBUG 13164 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:17:55.441+02:00 DEBUG 13164 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:17:55.445+02:00 DEBUG 13164 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:17:55.446+02:00 DEBUG 13164 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:17:55.447+02:00 ERROR 13164 --- [http-nio-8080-exec-4] c.t.b.c.PassengerProfileController       : Password is missing or empty
+2024-09-03T09:17:55.449+02:00 DEBUG 13164 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:24:42.801+02:00 DEBUG 13164 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:24:42.805+02:00 DEBUG 13164 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:24:42.807+02:00 DEBUG 13164 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:24:42.808+02:00 ERROR 13164 --- [http-nio-8080-exec-6] c.t.b.c.PassengerProfileController       : Password is missing or empty
+2024-09-03T09:24:42.809+02:00 DEBUG 13164 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:27:55.985+02:00  INFO 13164 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-09-03T09:27:55.994+02:00  INFO 13164 --- [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T09:27:55.997+02:00  INFO 13164 --- [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-03T09:27:56.002+02:00  INFO 13164 --- [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-03T09:28:01.049+02:00  INFO 23112 --- [main] c.t.b.BookingManagementApplication       : Starting BookingManagementApplication using Java 21.0.2 with PID 23112 (C:\Users\Admin\eclipse-workspace\booking-management\target\classes started by Admin in C:\Users\Admin\eclipse-workspace\booking-management)
+2024-09-03T09:28:01.051+02:00  INFO 23112 --- [main] c.t.b.BookingManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T09:28:01.493+02:00  INFO 23112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T09:28:01.535+02:00  INFO 23112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2024-09-03T09:28:01.884+02:00  INFO 23112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-03T09:28:01.894+02:00  INFO 23112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T09:28:01.895+02:00  INFO 23112 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-03T09:28:01.943+02:00  INFO 23112 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T09:28:01.944+02:00  INFO 23112 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 861 ms
+2024-09-03T09:28:02.050+02:00  INFO 23112 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T09:28:02.092+02:00  INFO 23112 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-03T09:28:02.116+02:00  INFO 23112 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-03T09:28:02.349+02:00  INFO 23112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T09:28:02.369+02:00  INFO 23112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T09:28:02.595+02:00  INFO 23112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dc2279c
+2024-09-03T09:28:02.596+02:00  INFO 23112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T09:28:02.632+02:00  WARN 23112 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-03T09:28:02.633+02:00  WARN 23112 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-03T09:28:03.286+02:00  INFO 23112 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-03T09:28:03.347+02:00  INFO 23112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T09:28:03.588+02:00  WARN 23112 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T09:28:03.601+02:00  INFO 23112 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-09-03T09:28:03.773+02:00 DEBUG 23112 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-03T09:28:03.925+02:00  INFO 23112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-03T09:28:03.932+02:00  INFO 23112 --- [main] c.t.b.BookingManagementApplication       : Started BookingManagementApplication in 3.18 seconds (process running for 3.647)
+2024-09-03T09:28:21.576+02:00  INFO 23112 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-03T09:28:21.576+02:00  INFO 23112 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-03T09:28:21.577+02:00  INFO 23112 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-03T09:28:21.593+02:00 DEBUG 23112 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:28:21.612+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:28:21.617+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:28:21.806+02:00  INFO 23112 --- [http-nio-8080-exec-2] c.t.b.c.PassengerProfileController       : Raw password: 123
+2024-09-03T09:28:21.959+02:00  INFO 23112 --- [http-nio-8080-exec-2] c.t.b.c.PassengerProfileController       : Encoded password (using Argon2): $argon2id$v=19$m=8192,t=3,p=1$pI51iDQ+wTAlwk1TycLRfg$un+ZnqzWuXhv56Re6ViSLtuO11NdTV2OTqJN3diVfRA
+2024-09-03T09:28:21.990+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:28:21.991+02:00 ERROR 23112 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value : com.travelcompany.bookingmanagement.model.PassengerProfile.phone] with root cause
+
+org.hibernate.PropertyValueException: not-null property references a null or transient value : com.travelcompany.bookingmanagement.model.PassengerProfile.phone
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:109) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:54) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:124) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:73) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:391) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:305) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.1.12.jar:6.1.12]
+	at jdk.proxy2/jdk.proxy2.$Proxy118.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319) ~[spring-orm-6.1.12.jar:6.1.12]
+	at jdk.proxy2/jdk.proxy2.$Proxy118.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:625) ~[spring-data-jpa-3.3.3.jar:3.3.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:173) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.3.3.jar:3.3.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379) ~[spring-tx-6.1.12.jar:6.1.12]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.12.jar:6.1.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.1.12.jar:6.1.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.3.3.jar:3.3.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.12.jar:6.1.12]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.1.12.jar:6.1.12]
+	at jdk.proxy2/jdk.proxy2.$Proxy122.save(Unknown Source) ~[na:na]
+	at com.travelcompany.bookingmanagement.service.PassengerProfileService.savePassengerProfile(PassengerProfileService.java:27) ~[classes/:na]
+	at com.travelcompany.bookingmanagement.controller.PassengerProfileController.registerPassenger(PassengerProfileController.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-09-03T09:28:22.002+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-09-03T09:28:22.003+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:28:22.004+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T09:28:22.004+02:00 DEBUG 23112 --- [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@58b7e75
+2024-09-03T09:37:35.687+02:00  INFO 23112 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-09-03T09:37:35.697+02:00  INFO 23112 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T09:37:35.698+02:00  INFO 23112 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-03T09:37:35.703+02:00  INFO 23112 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-03T09:37:50.998+02:00  INFO 24404 --- [main] c.t.b.BookingManagementApplication       : Starting BookingManagementApplication using Java 21.0.2 with PID 24404 (C:\Users\Admin\eclipse-workspace\booking-management\target\classes started by Admin in C:\Users\Admin\eclipse-workspace\booking-management)
+2024-09-03T09:37:51.000+02:00  INFO 24404 --- [main] c.t.b.BookingManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T09:37:51.452+02:00  INFO 24404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T09:37:51.496+02:00  INFO 24404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2024-09-03T09:37:51.849+02:00  INFO 24404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-03T09:37:51.859+02:00  INFO 24404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T09:37:51.859+02:00  INFO 24404 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-03T09:37:51.907+02:00  INFO 24404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T09:37:51.907+02:00  INFO 24404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 873 ms
+2024-09-03T09:37:52.016+02:00  INFO 24404 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T09:37:52.058+02:00  INFO 24404 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-03T09:37:52.083+02:00  INFO 24404 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-03T09:37:52.319+02:00  INFO 24404 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T09:37:52.340+02:00  INFO 24404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T09:37:52.574+02:00  INFO 24404 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b091a92
+2024-09-03T09:37:52.575+02:00  INFO 24404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T09:37:52.608+02:00  WARN 24404 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-03T09:37:52.610+02:00  WARN 24404 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-03T09:37:53.279+02:00  INFO 24404 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-03T09:37:53.331+02:00  INFO 24404 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T09:37:53.577+02:00  WARN 24404 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T09:37:53.592+02:00  INFO 24404 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-09-03T09:37:53.772+02:00 DEBUG 24404 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-03T09:37:53.937+02:00  INFO 24404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-03T09:37:53.944+02:00  INFO 24404 --- [main] c.t.b.BookingManagementApplication       : Started BookingManagementApplication in 3.232 seconds (process running for 3.679)
+2024-09-03T09:38:20.612+02:00  INFO 24404 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-03T09:38:20.612+02:00  INFO 24404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-03T09:38:20.613+02:00  INFO 24404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-03T09:38:20.626+02:00 DEBUG 24404 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:38:20.646+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:38:20.650+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:38:21.013+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:42:55.915+02:00 DEBUG 24404 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:42:55.919+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:42:55.920+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:42:56.002+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:43:25.360+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T09:43:25.364+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T09:43:25.568+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T09:43:25.569+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@54e6308e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T09:43:25.570+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T09:43:25.571+02:00  INFO 24404 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Username: kelsey
+2024-09-03T09:43:25.571+02:00  INFO 24404 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T09:43:25.574+02:00  INFO 24404 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$ysEPfz0muMPthAedEuG8uw$YW4AmUe0gOKs/clUB87o3r3PM+o9Z2DpY32FzGYP5dU
+2024-09-03T09:43:25.663+02:00  INFO 24404 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T09:43:25.663+02:00  INFO 24404 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T09:43:25.694+02:00 DEBUG 24404 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T09:43:25.699+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T09:43:25.811+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T09:43:25.812+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@5dcec603, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T09:43:25.813+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T09:43:25.815+02:00  INFO 24404 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: kelsey
+2024-09-03T09:45:28.201+02:00 DEBUG 24404 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:45:28.207+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:45:28.208+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:45:28.298+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:51:51.870+02:00 DEBUG 24404 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:51:51.874+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:51:51.875+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:51:51.881+02:00 ERROR 24404 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Username is already taken: root
+2024-09-03T09:51:51.883+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:53:07.314+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:53:07.318+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:53:07.319+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:53:07.418+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T09:55:41.580+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T09:55:41.584+02:00 DEBUG 24404 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T09:55:41.584+02:00 DEBUG 24404 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T09:55:41.686+02:00 DEBUG 24404 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:04:37.479+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:04:37.483+02:00 DEBUG 24404 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:04:37.485+02:00 DEBUG 24404 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:04:37.565+02:00 DEBUG 24404 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:06:09.020+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:06:09.086+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T10:06:09.087+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@2c2bcacb, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T10:06:09.087+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:12:01.980+02:00 DEBUG 24404 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:12:01.984+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:12:01.985+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:12:02.059+02:00 DEBUG 24404 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:20:03.429+02:00 DEBUG 24404 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:20:03.433+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:20:03.434+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:20:03.526+02:00 DEBUG 24404 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:25:48.851+02:00 DEBUG 24404 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:25:48.856+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:25:48.857+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:25:48.938+02:00 DEBUG 24404 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:28:06.401+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:28:06.406+02:00 DEBUG 24404 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:28:06.407+02:00 DEBUG 24404 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:28:06.486+02:00 DEBUG 24404 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:30:22.845+02:00 DEBUG 24404 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:30:22.849+02:00 DEBUG 24404 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:30:22.850+02:00 DEBUG 24404 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:30:22.925+02:00 DEBUG 24404 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:38:01.874+02:00 DEBUG 24404 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:38:01.878+02:00 DEBUG 24404 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:38:01.879+02:00 DEBUG 24404 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:38:01.956+02:00 DEBUG 24404 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:43:03.010+02:00 DEBUG 24404 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:43:03.013+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:43:03.014+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:43:03.094+02:00 DEBUG 24404 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:44:00.163+02:00  INFO 24404 --- [RMI TCP Connection(68)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-09-03T10:44:00.172+02:00  INFO 24404 --- [RMI TCP Connection(68)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T10:44:00.173+02:00  INFO 24404 --- [RMI TCP Connection(68)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-03T10:44:00.176+02:00  INFO 24404 --- [RMI TCP Connection(68)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-03T10:44:05.953+02:00  INFO 8708 --- [main] c.t.b.BookingManagementApplication       : Starting BookingManagementApplication using Java 21.0.2 with PID 8708 (C:\Users\Admin\eclipse-workspace\booking-management\target\classes started by Admin in C:\Users\Admin\eclipse-workspace\booking-management)
+2024-09-03T10:44:05.955+02:00  INFO 8708 --- [main] c.t.b.BookingManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T10:44:06.395+02:00  INFO 8708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T10:44:06.438+02:00  INFO 8708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2024-09-03T10:44:06.777+02:00  INFO 8708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-03T10:44:06.787+02:00  INFO 8708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T10:44:06.787+02:00  INFO 8708 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-03T10:44:06.836+02:00  INFO 8708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T10:44:06.836+02:00  INFO 8708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 849 ms
+2024-09-03T10:44:06.944+02:00  INFO 8708 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T10:44:06.984+02:00  INFO 8708 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-03T10:44:07.008+02:00  INFO 8708 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-03T10:44:07.232+02:00  INFO 8708 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T10:44:07.252+02:00  INFO 8708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T10:44:07.478+02:00  INFO 8708 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21a5b599
+2024-09-03T10:44:07.479+02:00  INFO 8708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T10:44:07.514+02:00  WARN 8708 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-03T10:44:07.515+02:00  WARN 8708 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-03T10:44:08.171+02:00  INFO 8708 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-03T10:44:08.314+02:00  INFO 8708 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T10:44:08.561+02:00  WARN 8708 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T10:44:08.575+02:00  INFO 8708 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-09-03T10:44:08.748+02:00 DEBUG 8708 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-03T10:44:08.907+02:00  INFO 8708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-03T10:44:08.912+02:00  INFO 8708 --- [main] c.t.b.BookingManagementApplication       : Started BookingManagementApplication in 3.237 seconds (process running for 3.686)
+2024-09-03T10:44:31.069+02:00  INFO 8708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-03T10:44:31.069+02:00  INFO 8708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-03T10:44:31.070+02:00  INFO 8708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-03T10:44:31.092+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/register
+2024-09-03T10:44:31.149+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T10:44:31.153+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T10:44:31.530+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T10:47:23.207+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T10:47:23.211+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T10:47:23.412+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T10:47:23.413+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@3fc17023, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T10:47:23.414+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T10:47:23.415+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Username: admin
+2024-09-03T10:47:23.415+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T10:47:23.418+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$NoK+mGKyfG4AiRJ5UIH1pA$j14/XxNu+zXJd8tN7hZ6Whz4jM/ZGZIizRceJRgfB8g
+2024-09-03T10:47:23.501+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T10:47:23.502+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T10:47:23.520+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T10:47:23.527+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T10:47:23.617+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T10:47:23.617+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@4acf6e28, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T10:47:23.617+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T10:47:23.618+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: admin
+2024-09-03T11:04:10.178+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:04:10.183+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:04:10.274+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:04:10.275+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@7dfe94ed, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:04:10.275+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:04:10.277+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:04:10.277+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:04:10.281+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:04:10.349+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:04:10.350+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:04:10.367+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:04:10.375+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:04:10.444+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:04:10.444+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@23407583, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:04:10.445+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:04:10.445+02:00  INFO 8708 --- [http-nio-8080-exec-2] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:04:21.118+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/bookings/calculate-fare?source=New%20York&destination=Baltimore
+2024-09-03T11:04:21.123+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/bookings/calculate-fare?source=New%20York&destination=Baltimore
+2024-09-03T11:04:21.199+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:04:21.199+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@12dafb41, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:04:21.203+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/bookings/calculate-fare?source=New%20York&destination=Baltimore
+2024-09-03T11:04:21.212+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.controller.BookingController       : Received source: New York, destination: Baltimore
+2024-09-03T11:04:21.212+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.controller.BookingController       : Decoded source: New York, destination: Baltimore
+2024-09-03T11:04:24.215+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/bookings
+2024-09-03T11:04:24.217+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/bookings
+2024-09-03T11:04:24.286+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:04:24.287+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@1b1df013, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:04:24.287+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/bookings
+2024-09-03T11:12:45.587+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:12:45.587+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:12:45.588+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:12:45.588+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:12:45.594+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:12:45.594+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:12:45.595+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:12:45.595+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:12:45.785+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:12:45.788+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:12:45.861+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:12:45.862+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@11faf2f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:12:45.862+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:12:45.862+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:13:17.595+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:13:17.598+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:13:17.665+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:13:17.665+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@293ceba5, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:13:17.665+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:13:17.666+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:13:17.666+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:13:17.669+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:13:17.753+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:13:17.753+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:13:17.771+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:13:17.775+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:13:17.844+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:13:17.844+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@5ca7cc52, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:13:17.844+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:13:17.845+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:13:28.437+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:13:28.440+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:13:28.505+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:13:28.506+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@21064214, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:13:28.506+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:13:28.507+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:13:28.507+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:13:28.509+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:13:28.575+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:13:28.575+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:13:28.594+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:13:28.599+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:13:28.666+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:13:28.666+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@4403e23e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:13:28.666+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:13:28.667+02:00  INFO 8708 --- [http-nio-8080-exec-9] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:13:31.088+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:13:31.089+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:13:31.089+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:13:31.089+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:13:31.090+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:13:31.091+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:13:31.091+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:13:31.092+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:13:31.380+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:13:31.497+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:13:31.497+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@7dceb41, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:13:31.498+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:13:31.499+02:00  INFO 8708 --- [http-nio-8080-exec-1] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:15:11.004+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:15:11.007+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:15:11.078+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:15:11.078+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@547a8c5, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:15:11.079+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:15:11.079+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:15:11.079+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:15:11.081+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:15:11.176+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:15:11.176+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:15:11.207+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:15:11.214+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:15:11.300+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:15:11.301+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@440130fc, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:15:11.301+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:15:11.302+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:16:08.259+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:16:08.259+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:16:08.260+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:16:08.260+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:16:08.261+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:16:08.262+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:16:08.263+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:16:08.263+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:16:08.606+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:16:08.612+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:16:08.613+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:16:08.613+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:16:08.613+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:16:08.614+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:16:08.614+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:16:08.616+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:16:08.616+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:17:03.309+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:17:03.310+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:17:03.310+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:17:03.310+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:17:03.310+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:17:03.310+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:17:03.312+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:17:03.312+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:17:03.462+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:17:03.468+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:17:03.470+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:17:03.471+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:17:03.471+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:17:03.472+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:17:03.472+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:17:03.472+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:17:03.472+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:17:17.481+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:17:17.486+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:17:17.565+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:17:17.566+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@33a44b91, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:17:17.566+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:17:17.567+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:17:17.567+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:17:17.571+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:17:17.644+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:17:17.644+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:17:17.663+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:17:17.672+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:17:17.749+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:17:17.749+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@2a14906f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:17:17.749+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:17:17.750+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:18:26.922+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:18:26.926+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:18:26.995+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:18:26.995+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@fbe634c, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:18:26.995+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:18:26.996+02:00  INFO 8708 --- [http-nio-8080-exec-1] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:18:26.996+02:00  INFO 8708 --- [http-nio-8080-exec-1] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:18:26.999+02:00  INFO 8708 --- [http-nio-8080-exec-1] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:18:27.062+02:00  INFO 8708 --- [http-nio-8080-exec-1] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:18:27.062+02:00  INFO 8708 --- [http-nio-8080-exec-1] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:18:27.080+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:18:27.088+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:18:27.155+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:18:27.156+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@5065b430, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:18:27.156+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:18:27.156+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:19:54.185+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:19:54.186+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:19:54.186+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:19:54.187+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:19:54.187+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:19:54.187+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:19:54.188+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:19:54.188+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:19:54.506+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:19:54.516+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:19:54.666+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:19:54.666+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@8514f84, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:19:54.668+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:19:54.669+02:00  INFO 8708 --- [http-nio-8080-exec-7] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:20:04.164+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:20:04.166+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:20:04.364+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:20:04.369+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:20:04.488+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:20:04.489+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@75db9715, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:20:04.489+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:20:04.491+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:20:27.161+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:20:27.161+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:20:27.161+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:20:27.161+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:20:27.163+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:20:27.163+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:20:27.163+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:20:27.163+02:00 DEBUG 8708 --- [http-nio-8080-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:20:27.354+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:20:27.358+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:20:27.477+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:20:27.478+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@6de66a87, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:20:27.479+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:20:27.480+02:00  INFO 8708 --- [http-nio-8080-exec-3] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:20:31.881+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:20:31.881+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:20:31.881+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:20:31.881+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:20:31.882+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:20:31.882+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:20:31.882+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:20:31.882+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:20:31.982+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:20:32.063+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:20:32.064+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@49830c3f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:20:32.064+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:20:32.065+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:22:33.521+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:22:33.522+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:22:33.522+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:22:33.522+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:22:33.524+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-09-03T11:22:33.524+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:22:33.524+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:22:33.524+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:22:33.790+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:22:33.802+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:22:33.950+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:22:33.951+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@41c47a95, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:22:33.951+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:22:33.952+02:00  INFO 8708 --- [http-nio-8080-exec-10] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:24:36.376+02:00 DEBUG 8708 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/login
+2024-09-03T11:24:36.380+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:24:36.447+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:24:36.447+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@433aab38, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:24:36.447+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:24:36.448+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.c.PassengerProfileController       : Decoded Username: root
+2024-09-03T11:24:36.448+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:24:36.451+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$J6gHOyuL+zKChWhrSjkTBA$sJJ8zwDAVS30vT0NiAdNMab3IV5tjPbOrPRxYjM48Iw
+2024-09-03T11:24:36.513+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:24:36.513+02:00  INFO 8708 --- [http-nio-8080-exec-4] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:24:36.530+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/passenger-profiles/current
+2024-09-03T11:24:36.537+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/passenger-profiles/current
+2024-09-03T11:24:36.604+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:24:36.605+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@33cca150, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:24:36.605+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/passenger-profiles/current
+2024-09-03T11:24:36.605+02:00  INFO 8708 --- [http-nio-8080-exec-6] c.t.b.c.PassengerProfileController       : Decoded Username for current profile: root
+2024-09-03T11:24:52.701+02:00 DEBUG 8708 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/bookings/calculate-fare?source=Philadelphia&destination=New%20York
+2024-09-03T11:24:52.703+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/bookings/calculate-fare?source=Philadelphia&destination=New%20York
+2024-09-03T11:24:52.771+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:24:52.771+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@368b713f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:24:52.771+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/bookings/calculate-fare?source=Philadelphia&destination=New%20York
+2024-09-03T11:24:52.772+02:00  INFO 8708 --- [http-nio-8080-exec-8] c.t.b.controller.BookingController       : Received source: Philadelphia, destination: New York
+2024-09-03T11:24:52.772+02:00  INFO 8708 --- [http-nio-8080-exec-8] c.t.b.controller.BookingController       : Decoded source: Philadelphia, destination: New York
+2024-09-03T11:25:50.653+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/bookings
+2024-09-03T11:25:50.654+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:25:50.669+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/bookings?continue to session
+2024-09-03T11:25:50.669+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:25:50.669+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:25:50.669+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-09-03T11:25:50.670+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:25:50.670+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2024-09-03T11:25:50.670+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-03T11:25:50.670+02:00 DEBUG 8708 --- [http-nio-8080-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1d8ca675
+2024-09-03T11:26:15.710+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/bookings
+2024-09-03T11:26:15.785+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:26:15.785+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@30aac823, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=DFC8B918F36275130BC2BB268B0663A9], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:26:15.785+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/bookings
+2024-09-03T11:26:15.795+02:00 ERROR 8708 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Invalid city pair: New York to Los Angeles] with root cause
+
+java.lang.IllegalArgumentException: Invalid city pair: New York to Los Angeles
+	at com.travelcompany.bookingmanagement.service.FareService.calculateDistance(FareService.java:56) ~[classes/:na]
+	at com.travelcompany.bookingmanagement.service.FareService.calculateFare(FareService.java:61) ~[classes/:na]
+	at com.travelcompany.bookingmanagement.service.BookingService.saveBooking(BookingService.java:39) ~[classes/:na]
+	at com.travelcompany.bookingmanagement.controller.BookingController.createBooking(BookingController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.3.jar:6.3.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-09-03T11:26:15.799+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-09-03T11:26:15.799+02:00 DEBUG 8708 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /error
+2024-09-03T11:27:08.175+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/bookings
+2024-09-03T11:27:08.243+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:27:08.243+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@4804527b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=DFC8B918F36275130BC2BB268B0663A9], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:27:08.243+02:00 DEBUG 8708 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/bookings
+2024-09-03T11:27:48.362+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/login
+2024-09-03T11:27:48.428+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:27:48.428+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@2471f95a, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=DFC8B918F36275130BC2BB268B0663A9], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:27:48.428+02:00 DEBUG 8708 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/login
+2024-09-03T11:27:48.429+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Username: admin
+2024-09-03T11:27:48.429+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Decoded Password: 123
+2024-09-03T11:27:48.432+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Stored encoded password: $argon2id$v=19$m=8192,t=3,p=1$NoK+mGKyfG4AiRJ5UIH1pA$j14/XxNu+zXJd8tN7hZ6Whz4jM/ZGZIizRceJRgfB8g
+2024-09-03T11:27:48.496+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Password match result: true
+2024-09-03T11:27:48.496+02:00  INFO 8708 --- [http-nio-8080-exec-5] c.t.b.c.PassengerProfileController       : Login successful
+2024-09-03T11:28:30.803+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T11:28:30.804+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T11:28:30.809+02:00 ERROR 8708 --- [http-nio-8080-exec-6] c.t.b.c.PassengerProfileController       : Username is already taken: john
+2024-09-03T11:28:30.810+02:00 DEBUG 8708 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:28:39.660+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/passenger-profiles/register
+2024-09-03T11:28:39.660+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/passenger-profiles/register
+2024-09-03T11:28:39.739+02:00 DEBUG 8708 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-03T11:29:00.239+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/bookings/calculate-fare?source=New%20York&destination=Boston
+2024-09-03T11:29:00.315+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-03T11:29:00.315+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.travelcompany.bookingmanagement.security.CustomUserDetails@2dc21c4c, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=DFC8B918F36275130BC2BB268B0663A9], Granted Authorities=[ROLE_USER]]
+2024-09-03T11:29:00.316+02:00 DEBUG 8708 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/bookings/calculate-fare?source=New%20York&destination=Boston
+2024-09-03T11:29:00.316+02:00  INFO 8708 --- [http-nio-8080-exec-9] c.t.b.controller.BookingController       : Received source: New York, destination: Boston
+2024-09-03T11:29:00.316+02:00  INFO 8708 --- [http-nio-8080-exec-9] c.t.b.controller.BookingController       : Decoded source: New York, destination: Boston
+2024-09-03T11:32:45.319+02:00  INFO 8708 --- [RMI TCP Connection(52)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-09-03T11:32:45.331+02:00  INFO 8708 --- [RMI TCP Connection(52)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T11:32:45.333+02:00  INFO 8708 --- [RMI TCP Connection(52)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-03T11:32:45.338+02:00  INFO 8708 --- [RMI TCP Connection(52)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
